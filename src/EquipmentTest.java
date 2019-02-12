@@ -20,7 +20,7 @@ public class EquipmentTest
 		
 		// initializing the should be values
 		String shouldBeName = "batrope";
-		int shouldBeCount = 8;	// fix 8 back to 5
+		int shouldBeCount = 5;	// fix 8 back to 5
 		double shouldBeTotalWeight = 2.2;
 		double shouldBeTotalPrice = 10.7;
 		String shouldBeDescription = "used for repelling";
