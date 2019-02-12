@@ -15,33 +15,59 @@ public class AnimalTest
         // Use the default constructor
         Animal animal = new Animal();
 
-        // The name should be "noname", color "unknown", height and weight 0.
-        Assert.assertEquals("unknown", animal.getColor());
-        Assert.assertEquals("noname", animal.getName());
-        Assert.assertEquals(0, animal.getHeight(), 0.01);
-        Assert.assertEquals(0, animal.getWeight(), 0.01);
+     // initializing the actual values
+    	String actualColor = animal.getColor();
+    	String actualName = animal.getName();
+    	double actualWeight = animal.getWeight();
+    	double actualHeight = animal.getHeight();
+    	
+    	// initializing the should be values
+    	String shouldBeColor = "unknown";
+    	String shouldBeName = "noname";
+    	double shouldBeWeight = 0;
+    	double shouldBeHeight = 0;
+    	
+        // comparing the actual values to the should be values
+        Assert.assertEquals(shouldBeColor, actualColor);
+        Assert.assertEquals(shouldBeName, actualName);
+        Assert.assertEquals(shouldBeWeight, actualWeight, 0.03);
+        Assert.assertEquals(shouldBeHeight, actualHeight, 0.03);
     }
     
     public void fullConstructorTest() throws AssertException
     {
+    	// creating a new full constructor
     	Animal tiger = new Animal("blue", "tigger", 160.4, 50.1);
     	
-    	Assert.assertEquals("blue", tiger.getColor());
-    	Assert.assertEquals("tigger", tiger.getName());
-    	Assert.assertEquals(160.4, tiger.getWeight(), 0.02);
-    	Assert.assertEquals(50.1, tiger.getHeight(), 0.02);
+    	// initializing the actual values
+    	String actualColor = tiger.getColor();
+    	String actualName = tiger.getName();
+    	double actualWeight = tiger.getWeight();
+    	double actualHeight = tiger.getHeight();
+    	
+    	// initializing the should be values
+    	String shouldBeColor = "blue";
+    	String shouldBeName = "tigger";
+    	double shouldBeWeight = 160.4;
+    	double shouldBeHeight = 50.1;
+    	
+    	// comparing the actual values to the should be values
+    	Assert.assertEquals(shouldBeColor, actualColor);
+    	Assert.assertEquals(shouldBeName, actualName);
+    	Assert.assertEquals(shouldBeWeight, actualWeight, 0.02);
+    	Assert.assertEquals(shouldBeHeight, actualHeight, 0.02);
     }
     
-    public void toStringTest() throws AssertException
+    // testing the toString method
+    public void animalToStringTest() throws AssertException
     {
-    	Animal tiger = new Animal("blue", "tigger", 160.4, 50.1);
-    	String expected = "tigger, a blue-colored animal. 160.4 pounds, 50.1 inches\n";
-    	String actual = tiger.toString();
+    	Animal tiger2 = new Animal("green", "bob", 187.2, 70.9);
     	
-    	Assert.assertEquals(expected, actual);
+    	String expected = "bob, a green-colored animal. 187.2 pounds, 70.9 inches\n";
+    	String actual = tiger2.toString();
+    	
+    	Assert.assertEquals(expected, actual);	
     }
-
-    // TODO: test full constructor, getters, and toString
-    // good?
+    
 }
 
