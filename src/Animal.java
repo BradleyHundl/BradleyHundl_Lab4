@@ -139,9 +139,12 @@ public class Animal
         Animal otherAni = (Animal)other;
 
         // Check that all fields match (color, name, weight, height):
+        if (otherAni.getName() == this.getName() && otherAni.getColor() ==this.getColor() && 
+        		otherAni.getWeight() == this.getWeight() && otherAni.getHeight() == this.getHeight())
+        {
+        	return true;
+        }
         
-        // TODO: finish this...
-        
-        /* return TODO; */
+        return false;
     }
 }

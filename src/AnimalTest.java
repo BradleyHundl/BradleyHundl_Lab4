@@ -11,11 +11,11 @@ public class AnimalTest
      * Test the empty Animal constructor and the getters
      */
     public void emptyConstructorTest() throws AssertException
-    {
+    {    	
         // Use the default constructor
         Animal animal = new Animal();
 
-     // initializing the actual values
+        // initializing the actual values
     	String actualColor = animal.getColor();
     	String actualName = animal.getName();
     	double actualWeight = animal.getWeight();

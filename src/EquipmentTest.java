@@ -10,6 +10,7 @@ public class EquipmentTest
 	{
 		// creating a new full constructor 
 		Equipment newItem = new Equipment("batrope/5,2.2,10.7,used for repelling");
+		Equipment newItem1 = new Equipment("batrope/5,2.2,10.7,used for repelling");
 		
 		// initializing the actual values
 		String actualName = newItem.getName();

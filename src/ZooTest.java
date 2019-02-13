@@ -47,7 +47,7 @@ public class ZooTest
 		
 		Animal Monkey = new Animal("brown", "George", 60.5, 47.8);
 		Animal Lion = new Animal("orange", "Timothy", 230, 50.9);
-		Animal Bird = new Animal("red", "Simon", 3.2, 7.4); // fix 3.1 back to 3.2
+		Animal Bird = new Animal("red", "Simon", 3.2, 7.4);
 		
 		okcZoo.addAnimal(Monkey);
 		okcZoo.addAnimal(Lion);
